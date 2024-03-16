@@ -2,7 +2,7 @@
 
 ## Build Docker Image
 
-Make changes on `bookstore` theme.
+Make changes on `frontapify` theme.
 
 1. Build the docker image
 ```bash

@@ -5,9 +5,9 @@ services:
     image: postgres:latest # use latest official postgres version
     container_name: postgres
     environment:
-      POSTGRES_DB: bookstore # database name
+      POSTGRES_DB: frontapify # database name
       POSTGRES_USER: postgres # database admin user
-      POSTGRES_PASSWORD: password # database admin password
+      POSTGRES_PASSWORD: aldhr1011 # database admin password
     ports:
       - 5432:5432
     volumes:

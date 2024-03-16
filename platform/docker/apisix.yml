@@ -1,7 +1,7 @@
 version: "3.8"
 
 networks:
-  bookstore:
+  frontapify:
     driver: bridge
 
 services:
@@ -14,7 +14,7 @@ services:
     ports:
       - "9000:9000"
     networks:
-      - bookstore
+      - frontapify
 
   apisix:
     image: apache/apisix:latest
@@ -28,7 +28,7 @@ services:
       - "8080:8080/tcp"
       - "8443:8443/tcp"
     networks:
-      - bookstore
+      - frontapify
 
   etcd:
     image: bitnami/etcd:latest
@@ -45,7 +45,7 @@ services:
     ports:
       - "2379:2379/tcp"
     networks:
-      - bookstore
+      - frontapify
 
 volumes:
   etcd_data:

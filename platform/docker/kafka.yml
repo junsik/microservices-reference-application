@@ -5,7 +5,7 @@ services:
     image: 'bitnami/kafka:latest'
     container_name: kafka
     volumes:
-      - ./kafka:/app/bookstore
+      - ./kafka:/app/frontapify
     ports:
       - '9092:9092'
     environment:

@@ -1,7 +1,7 @@
 version: "3.8"
 
 networks:
-  bookstore:
+  frontapify:
 
 services:
   prometheus:
@@ -15,7 +15,7 @@ services:
     ports:
       - "9090:9090"
     networks:
-      - bookstore
+      - frontapify
 
   grafana:
     image: grafana/grafana:latest
@@ -35,7 +35,7 @@ services:
     depends_on:
       - prometheus
     networks:
-      - bookstore
+      - frontapify
 
   minio:
     image: minio/minio
@@ -48,7 +48,7 @@ services:
     volumes:
       - minio-data:/data
     networks:
-      - bookstore
+      - frontapify
 
   loki:
     image: grafana/loki:latest
@@ -57,7 +57,7 @@ services:
       - "3100:3100"
     command: [ "-config.file=/etc/loki/local-config.yaml" ]
     networks:
-      - bookstore
+      - frontapify
 
   tempo:
     image: grafana/tempo:latest
@@ -73,7 +73,7 @@ services:
       - "4318:4318"  # otlp http
       - "9411:9411"   # zipkin
     networks:
-      - bookstore
+      - frontapify
 
   mimir:
     image: grafana/mimir:latest
@@ -86,7 +86,7 @@ services:
       - ./monitoring/alertmanager-fallback-config.yaml:/etc/alertmanager-fallback-config.yaml
       - mimir-data:/data
     networks:
-      - bookstore
+      - frontapify
 
 
 volumes:

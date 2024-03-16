@@ -1,8 +1,8 @@
 {
-  "id": "bookstore",
-  "realm": "bookstore",
-  "displayName": "MRA Bookstore IAM",
-  "displayNameHtml": "<div class=\"kc-logo-text\"><span>MRA Bookstore IAM</span></div>",
+  "id": "frontapify",
+  "realm": "frontapify",
+  "displayName": "MRA frontapify IAM",
+  "displayNameHtml": "<div class=\"kc-logo-text\"><span>MRA frontapify IAM</span></div>",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": true,
@@ -53,7 +53,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "bookstore",
+        "containerId": "frontapify",
         "attributes": {}
       },
       {
@@ -62,12 +62,12 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "bookstore",
+        "containerId": "frontapify",
         "attributes": {}
       },
       {
         "id": "9bcaa7fe-a5cf-4376-9787-5db5b0274335",
-        "name": "default-roles-bookstore",
+        "name": "default-roles-frontapify",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -83,7 +83,7 @@
           }
         },
         "clientRole": false,
-        "containerId": "bookstore",
+        "containerId": "frontapify",
         "attributes": {}
       }
     ],
@@ -456,11 +456,11 @@
   ],
   "defaultRole": {
     "id": "9bcaa7fe-a5cf-4376-9787-5db5b0274335",
-    "name": "default-roles-bookstore",
+    "name": "default-roles-frontapify",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
-    "containerId": "bookstore"
+    "containerId": "frontapify"
   },
   "requiredCredentials": [
     "password"
@@ -526,14 +526,14 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/bookstore/account/",
+      "baseUrl": "/realms/frontapify/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/realms/bookstore/account/*"
+        "/realms/frontapify/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -570,14 +570,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/bookstore/account/",
+      "baseUrl": "/realms/frontapify/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/realms/bookstore/account/*"
+        "/realms/frontapify/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -745,14 +745,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/bookstore/console/",
+      "baseUrl": "/admin/frontapify/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/admin/bookstore/console/*"
+        "/admin/frontapify/console/*"
       ],
       "webOrigins": [
         "+"
